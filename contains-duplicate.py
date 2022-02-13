@@ -1,9 +1,15 @@
+import time
+start_time = time.time()
+
 class Solution:
     def containsDuplicate(self, nums):
+        obj={}
         for i in range(len(nums)):
-            for j in range(i+1,len(nums)):
-                if nums[i] == nums[j]:
-                    return True
+            if obj.keys().__contains__(nums[i]):
+                return nums[i]
+            else:
+                obj[nums[i]]=1
+        return False
 
-obj=Solution()
-print(obj.containsDuplicate([1,2,3,1]))
+obj1=Solution()
+print(obj1.containsDuplicate([0,4,5,0,3,6]))
