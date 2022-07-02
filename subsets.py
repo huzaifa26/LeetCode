@@ -1,9 +1,14 @@
 class Solution:
     def subsets(self, nums):
+        arr=[]
+        arr.append([])
         for i in range(len(nums)):
-            arr=[]
-            for j in range(i):
-                print(nums[j])
+            # arr.append([nums[i]])
+            for j in range(i+1,len(nums)):
+                # arr.append([nums[i],nums[j]])
+
+        
+        return arr
 
 ss=Solution()
-ss.subsets([1,2,3])
+print(ss.subsets([1,2,3]))
